@@ -15,7 +15,7 @@
 
 ## 🎯 About This Repository
 
-Welcome to MrGl1tchNu11's digital archives! This repository contains **complete writeups** for the **CyberJawara 2025 Capture The Flag** competition, solved with Silver Wolf's signature hacking style from Honkai Star Rail.
+Welcome to MrGl1tchNu11's digital archives! This repository contains **complete writeups** for the **CyberJawara 2025/2026 Capture The Flag** competition, solved with Silver Wolf's signature hacking style from Honkai Star Rail.
 
 Just like Silver Wolf who excels at infiltrating digital systems and cracking complex codes, these writeups will guide you through an epic journey in the cybersecurity world with a systematic and elegant approach.
 
@@ -27,7 +27,17 @@ Just like Silver Wolf who excels at infiltrating digital systems and cracking co
 
 ---
 
-## 🌟 Challenge Categories
+## 🏆 Competition Overview
+
+This repository is divided into two major phases:
+
+### 📁 Qualification Round
+
+### 📁 Finals Round
+
+---
+
+## 🌟 Qualification Round - Challenge Categories
 
 ### 🔍 **Forensics**
 
@@ -61,16 +71,58 @@ Just like Silver Wolf who excels at infiltrating digital systems and cracking co
    - Technique: Format string exploitation, BSS leak, memory dump
    - Flag: `CJ2025{110556da2fe3399b70415b6a714d0a129a2a4a22b5ee736188e52e121bf4bdb2}`
 
+---
+
+## 🏆 Finals Round - Challenge Categories
+
+### 💥 **PWN**
+
+1. **babu-format** 🩸 _(First Blood)_ - Format String Vulnerability + Buffer Overflow
+   - Technique: `__printf_chk` bypass via `%p` chain leak, ret2libc, ROP chain, `shutdown("send")` EOF trigger
+   - Flag: `CJ2025{ae930705f5c710dd698adff99055dfb3347f52965f15891a7fc92cb2512e749c}`
+
+### 🔍 **Forensics**
+
+1. **7sFetcher** - AWS CloudTrail & Web Log Investigation
+   - Technique: SSRF via IMDSv1, AWS credential theft analysis, CloudTrail event reconstruction, 24-question forensic challenge
+   - Flag: `CJ2025{i_cant_clear_xaleid_scopix_pls_help_ea25a5410b12}`
+
+2. **S7** - Industrial Control System (ICS) PCAP Analysis
+   - Technique: S7Comm protocol dissection, Job/Ack_Data pairing, byte-address reconstruction, scrambled base64 recovery via pyshark
+   - Flag: `CJ2025{c6c2631ac08abbc38a590ba8ed68044a64f6bfa01f6e4b2a34e29d9dc5adac80}`
+
+### 🔧 **Reverse Engineering**
+
+1. **legacy-project** - Delphi PE32 Binary Analysis
+   - Technique: IDA Pro decompilation, Delphi VMT traversal, custom modular arithmetic solver, reverse-engineered hash comparison
+   - Flag: `CJ{D0_U_R3M3MB3R_ME2_C213CCA9D34CBF5B7B61}`
+
+2. **Safe Extension** - WebAssembly (WASM) Cipher Reversal
+   - Technique: WASM disassembly, ARX (Add-Rotate-XOR) cipher identification, 6-round decryption, v128 SIMD constant extraction
+   - Flag: `CJ{b3_c4REful_0f_m4l1c10us_3x73ns10ns}`
+
+---
+
 ## 🌌 Repository Structure
 
 ```
 CyberJawara-2025/
-├── pdf/
-│   └── PELAJAR_kata rizqi lengah dikit mau di ddos platformnya, hati hati ya panitia_Writeup.pdf
+├── Quals/
+│   └── pdf/
+│       └── PELAJAR_kata rizqi lengah dikit mau di ddos platformnya, hati hati ya panitia_Writeup.pdf
+│
+├── Finals/
+│   └── pdf/
+│       └── CJ2025-pelajar-KATA RIZQI LENGAH DI ya gitu la kira kira.pdf
+│
 └── README.md
 ```
 
-## 📋 Challenge Overview
+---
+
+## 📋 Complete Challenge Overview
+
+### Qualification Round
 
 | Category  | Challenge      | Difficulty | Technique                    | Status |
 | --------- | -------------- | ---------- | ---------------------------- | ------ |
@@ -81,6 +133,18 @@ CyberJawara-2025/
 | PWN       | Spushcode      | ⭐⭐⭐     | Shellcode Injection          | ✅     |
 | PWN       | forgotten-flag | ⭐⭐⭐     | Format String Vulnerability  | ✅     |
 
+### Finals Round
+
+| Category  | Challenge      | Points | Difficulty | Technique                           | Status |
+| --------- | -------------- | ------ | ---------- | ----------------------------------- | ------ |
+| PWN       | babu-format 🩸 | 1000   | ⭐⭐⭐⭐   | Format String + ROP Chain           | ✅     |
+| Forensics | 7sFetcher      | 371    | ⭐⭐⭐     | AWS SSRF & CloudTrail Analysis      | ✅     |
+| Forensics | S7             | 321    | ⭐⭐⭐     | S7Comm PCAP & Base64 Reconstruction | ✅     |
+| Reverse   | legacy-project | 593    | ⭐⭐⭐⭐   | Delphi PE32 Binary Reversing        | ✅     |
+| Reverse   | Safe Extension | 371    | ⭐⭐⭐⭐   | WASM ARX Cipher Decryption          | ✅     |
+
+---
+
 <div align="center">
 
 **"Every expert was once a beginner. Every pro was once an amateur."**
@@ -90,6 +154,6 @@ _Keep hacking, keep learning! 🐺⚡_
 [![Star this repo](https://img.shields.io/github/stars/MrGl1tchNu11/CyberJawara2025-WriteUp?style=social)](https://github.com/MrGl1tchNu11/CyberJawara2025-WriteUp)
 [![Fork this repo](https://img.shields.io/github/forks/MrGl1tchNu11/CyberJawara2025-WriteUp?style=social)](https://github.com/MrGl1tchNu11/CyberJawara2025-WriteUp)
 
-_Made with 💜 by kata rizqi lengah dikit mau di ddos platformnya, hati hati ya panitia_
+_Made with 💜 by Mr.Gl1tchNu11_
 
 </div>
